@@ -24,6 +24,8 @@ struct LaunchOptions {
     bool lightsOn = false;
     bool withUI = false;
     bool noVsync = false;
+    // start with a feature switched off (for comparison figures)
+    bool noShadows = false, noDust = false, noShafts = false, noGrading = false, wireframe = false;
     int width = 1280, height = 720;
 };
 

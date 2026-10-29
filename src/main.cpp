@@ -19,12 +19,18 @@ int main(int argc, char** argv) {
         else if (!std::strcmp(argv[i], "--lights")) opt.lightsOn = true;
         else if (!std::strcmp(argv[i], "--ui")) opt.withUI = true;
         else if (!std::strcmp(argv[i], "--novsync")) opt.noVsync = true;
+        else if (!std::strcmp(argv[i], "--noshadows")) opt.noShadows = true;
+        else if (!std::strcmp(argv[i], "--nodust")) opt.noDust = true;
+        else if (!std::strcmp(argv[i], "--noshafts")) opt.noShafts = true;
+        else if (!std::strcmp(argv[i], "--nograding")) opt.noGrading = true;
+        else if (!std::strcmp(argv[i], "--wireframe")) opt.wireframe = true;
         else if (!std::strcmp(argv[i], "--size")) {
             opt.width = std::atoi(next());
             opt.height = std::atoi(next());
         } else {
             std::cout << "Usage: CozyRoom [--hour H] [--preset 0-3] [--lights] [--novsync]\n"
-                         "                [--capture out.png --frames N [--ui]] [--size W H]\n";
+                         "                [--capture out.png --frames N [--ui]] [--size W H]\n"
+                         "                [--noshadows] [--nodust] [--noshafts] [--nograding] [--wireframe]\n";
             return 0;
         }
     }

@@ -55,6 +55,11 @@ App::App(const LaunchOptions& opt) : m_opt(opt) {
         m_state.deskLamp = m_state.floorLamp = m_state.fairyLights = true;
         m_state.autoLights = false;
     }
+    if (opt.noShadows) m_state.shadows = false;
+    if (opt.noDust) m_state.dust = false;
+    if (opt.noShafts) m_state.lightShafts = false;
+    if (opt.noGrading) m_state.warmColdGrading = false;
+    if (opt.wireframe) m_state.wireframe = true;
     if (!opt.capturePath.empty()) m_state.showPanel = opt.withUI;
     updateAutoLights();
 }
