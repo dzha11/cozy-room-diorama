@@ -1,0 +1,22 @@
+# build output
+build/
+build-*/
+cmake-build-*/
+out/
+*.o
+*.obj
+*.exe
+*.app
+CozyRoom
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/settings.json
+*.swp
+
+# runtime output
+screenshots/
+imgui.ini
