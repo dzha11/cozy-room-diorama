@@ -42,7 +42,8 @@ target_include_directories(CozyRoom PRIVATE
     src
     external/glm
     external/stb)
-target_link_libraries(CozyRoom PRIVATE glfw glad imgui ${CMAKE_DL_LIBS})
+# glfw comes in through imgui (PUBLIC), listing it twice makes the macOS linker warn
+target_link_libraries(CozyRoom PRIVATE imgui glad ${CMAKE_DL_LIBS})
 
 # Shaders and textures are loaded from the source tree, so the program can be
 # started from any working directory (VS Code, terminal, Xcode...).
